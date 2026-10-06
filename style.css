@@ -1,0 +1,1016 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f5;
+    color: #222;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 70px;
+    padding: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #777;
+    font-size: 15px;
+}
+
+.navbar a.active,
+.navbar a:hover {
+    color: #222;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 86%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome {
+    margin-top: 55px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.small-text {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #777;
+
+    margin-bottom: 10px;
+}
+
+.welcome h1 {
+    font-size: 42px;
+    line-height: 1.15;
+
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #777;
+    max-width: 520px;
+    line-height: 1.6;
+}
+
+.date-box {
+    text-align: right;
+}
+
+.date-box p {
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.date-box h2 {
+    font-size: 20px;
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+    margin-top: 40px;
+}
+
+.stat-card {
+    background: white;
+
+    border: 1px solid #e5e5e5;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.stat-number {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.stat-label {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+.focus-section,
+.progress-section,
+.tasks-section,
+.upcoming-section,
+.subjects-section {
+    margin-top: 55px;
+}
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 27px;
+}
+
+.section-description {
+    color: #777;
+    margin-top: 7px;
+    font-size: 14px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-header h2 {
+    font-size: 27px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-btn {
+    border: none;
+
+    background: #222;
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.primary-btn:hover {
+    background: #444;
+}
+
+.secondary-btn {
+    border: 1px solid #ddd;
+
+    background: white;
+    color: #333;
+
+    padding: 11px 15px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+.secondary-btn:hover {
+    background: #f3f3f3;
+}
+
+
+/* =========================
+   FOCUS
+========================= */
+
+.focus-list {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
+}
+
+.focus-card {
+    background: white;
+
+    border: 1px solid #e5e5e5;
+
+    padding: 18px;
+}
+
+.focus-number {
+    color: #888;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.focus-card h3 {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.focus-meta {
+    font-size: 13px;
+    color: #777;
+}
+
+.focus-empty {
+    background: white;
+    border: 1px solid #e5e5e5;
+
+    padding: 25px;
+
+    color: #777;
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-section {
+    background: white;
+
+    border: 1px solid #e5e5e5;
+
+    padding: 25px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.progress-header h2 {
+    font-size: 24px;
+}
+
+#progressText {
+    font-size: 24px;
+}
+
+.progress-bar {
+    height: 10px;
+
+    background: #eee;
+
+    border-radius: 20px;
+
+    margin-top: 20px;
+
+    overflow: hidden;
+}
+
+#progressFill {
+    height: 100%;
+
+    width: 0%;
+
+    background: #222;
+
+    border-radius: 20px;
+
+    transition: width 0.3s ease;
+}
+
+.progress-details {
+    color: #777;
+    font-size: 13px;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   QUICK FILTERS
+========================= */
+
+.quick-filters {
+    display: flex;
+    gap: 8px;
+
+    margin-top: 25px;
+    margin-bottom: 15px;
+
+    flex-wrap: wrap;
+}
+
+.quick-filter {
+    border: 1px solid #ddd;
+
+    background: white;
+    color: #555;
+
+    padding: 9px 14px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+.quick-filter:hover {
+    background: #f0f0f0;
+}
+
+.quick-filter.active {
+    background: #222;
+    color: white;
+
+    border-color: #222;
+}
+
+
+/* =========================
+   FILTERS
+========================= */
+
+.filters {
+    display: flex;
+
+    gap: 10px;
+
+    margin: 15px 0 25px;
+
+    align-items: center;
+}
+
+.filters input,
+.filters select {
+    padding: 11px 13px;
+
+    border: 1px solid #ddd;
+
+    background: white;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+.filters input {
+    flex: 1;
+}
+
+
+/* =========================
+   TASK CARDS
+========================= */
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.task-card {
+    background: white;
+
+    border: 1px solid #e5e5e5;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    min-width: 0;
+}
+
+.complete-btn {
+    width: 24px;
+    height: 24px;
+
+    min-width: 24px;
+
+    border: 1px solid #bbb;
+
+    background: white;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.task-card.completed .complete-btn {
+    background: #222;
+    border-color: #222;
+}
+
+.task-info {
+    min-width: 0;
+}
+
+.task-info h3 {
+    font-size: 16px;
+
+    margin-bottom: 7px;
+
+    word-break: break-word;
+}
+
+.task-card.completed h3 {
+    text-decoration: line-through;
+
+    color: #999;
+}
+
+.task-meta {
+    font-size: 13px;
+
+    color: #888;
+}
+
+.task-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.priority {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.priority.high {
+    background: #fde8e8;
+    color: #b42318;
+}
+
+.priority.medium {
+    background: #fff4d6;
+    color: #9a6700;
+}
+
+.priority.low {
+    background: #e8f5e9;
+    color: #28743a;
+}
+
+.overdue {
+    color: #777;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    border: 1px solid #ddd;
+
+    padding: 4px 7px;
+
+    border-radius: 4px;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    color: #888;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    color: #222;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+    text-align: center;
+
+    padding: 45px;
+
+    color: #888;
+
+    background: white;
+
+    border: 1px solid #e5e5e5;
+}
+
+
+/* =========================
+   UPCOMING
+========================= */
+
+.upcoming-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.upcoming-card {
+    background: white;
+
+    border: 1px solid #e5e5e5;
+
+    padding: 17px 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.upcoming-title {
+    font-weight: 600;
+
+    margin-bottom: 5px;
+}
+
+.upcoming-meta {
+    font-size: 13px;
+
+    color: #777;
+}
+
+.days-left {
+    font-size: 13px;
+
+    color: #666;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   SUBJECTS
+========================= */
+
+.subject-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.subject-card {
+    background: white;
+
+    border: 1px solid #e5e5e5;
+
+    padding: 14px 18px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+.subject-card span {
+    color: #777;
+
+    margin-left: 5px;
+}
+
+
+/* =========================
+   MODALS
+========================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+#subjectDeleteModal,
+#deleteModal {
+    z-index: 2000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    width: 100%;
+
+    max-width: 450px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 8px;
+}
+
+.modal-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.modal-header h2 {
+    font-size: 22px;
+}
+
+.close-btn {
+    border: none;
+
+    background: transparent;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    color: #777;
+}
+
+
+/* =========================
+   TASK FORM
+========================= */
+
+#taskForm {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+#taskForm label,
+.subject-form label {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-top: 8px;
+}
+
+#taskForm input,
+#taskForm select,
+#newSubject {
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+.submit-btn {
+    margin-top: 15px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #222;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+.submit-btn:hover {
+    background: #444;
+}
+
+
+/* =========================
+   SUBJECT MANAGEMENT
+========================= */
+
+.subject-input-row {
+    display: flex;
+
+    gap: 8px;
+}
+
+.subject-input-row input {
+    flex: 1;
+}
+
+.subject-input-row .submit-btn {
+    margin-top: 0;
+}
+
+.managed-subjects {
+    margin-top: 30px;
+}
+
+.managed-subjects h3 {
+    font-size: 16px;
+
+    margin-bottom: 15px;
+}
+
+.managed-subject-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.managed-subject-item:last-child {
+    border-bottom: none;
+}
+
+.remove-subject-btn {
+    border: none;
+
+    background: transparent;
+
+    color: #888;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+.remove-subject-btn:hover {
+    color: #222;
+}
+
+.subject-empty {
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .welcome {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .date-box {
+        text-align: left;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .focus-list {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .filters input {
+        width: 100%;
+    }
+
+    .section-header {
+        gap: 15px;
+
+        align-items: flex-start;
+    }
+
+    .task-card {
+        align-items: flex-start;
+    }
+
+    .task-right {
+        flex-wrap: wrap;
+
+        justify-content: flex-end;
+    }
+
+    .upcoming-card {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .navbar {
+        height: auto;
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .navbar nav {
+        gap: 20px;
+    }
+
+    .welcome {
+        margin-top: 35px;
+    }
+
+    .welcome h1 {
+        font-size: 34px;
+    }
+
+    .section-header {
+        flex-direction: column;
+    }
+
+    .task-card {
+        flex-direction: column;
+    }
+
+    .task-left {
+        width: 100%;
+    }
+
+    .task-right {
+        width: 100%;
+
+        justify-content: flex-start;
+    }
+
+    .subject-input-row {
+        flex-direction: column;
+    }
+}
+
+/* =========================
+   SECTION SPACING
+========================= */
+
+.focus-section {
+    margin-bottom: 70px;
+}
+
+.progress-section {
+    margin-bottom: 70px;
+}
+
+.tasks-section {
+    margin-bottom: 80px;
+}
+
+.upcoming-section {
+    margin-bottom: 80px;
+}
+
+.subjects-section {
+    margin-bottom: 120px;
+    padding-bottom: 20px;
+}
+
+/* =========================
+   DELETE CONFIRMATION
+========================= */
+
+.delete-modal {
+    max-width: 420px;
+}
+
+.delete-message {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.delete-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.delete-confirm-btn {
+    border: none;
+
+    background: #b42318;
+    color: white;
+
+    padding: 11px 16px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.delete-confirm-btn:hover {
+    background: #8f1d14;
+}
